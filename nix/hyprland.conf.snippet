@@ -1,0 +1,14 @@
+# Quickcast Hyprland Configuration Snippet
+# Add to ~/.config/hypr/hyprland.conf
+
+# 1. Hotkey to toggle Quickcast launcher (Cmd/Super + Space like Raycast)
+bind = $mainMod, SPACE, exec, quickcast toggle
+
+# 2. Window & Layer rules for Raycast-like blur & pop-in animation
+layerrule = blur, quickcast
+layerrule = ignorezero, quickcast
+layerrule = animation popin 85%, quickcast
+
+# 3. Autostart Quickcast daemon and UI (if not using Home-Manager systemd service)
+exec-once = quickcastd
+exec-once = quickshell -p ~/Documents/quickcast/ui

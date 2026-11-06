@@ -1,0 +1,6 @@
+bin/
+/quickcast
+/quickcastd
+*.sock
+.DS_Store
+result
